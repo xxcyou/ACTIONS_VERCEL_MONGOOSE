@@ -3,9 +3,7 @@
       "builds": [
             {
                   "src": "index.js",
-                  "use": "@now/node",
-                  "installCommand": "npm install",
-                  "buildCommand": "npm run build"
+                  "use": "@now/node"
             }
       ],
       "routes": [
