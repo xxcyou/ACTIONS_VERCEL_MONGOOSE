@@ -18,7 +18,7 @@ jobs:
         run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: GWJcgw7GHijEqPKDFcUmyIG7
-          VERCEL_PROJECT_ID: prj_6WzURHjiDuI2IXfd2z8Zd2lnbBSk
+          VERCEL_PROJECT_ID: prj_177Q5g22FRfHuiJLdhIpEz1xzYga
       - name: Check MongoDB connection
         run: npm run check-mongo-connection
         env:
