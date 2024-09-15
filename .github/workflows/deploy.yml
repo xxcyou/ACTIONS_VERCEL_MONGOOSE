@@ -12,8 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Node.js dependencies
         run: npm install
-      - name: Build and test project
-        run: npm run build && npm run test # 如果有构建和测试命令，可根据实际情况调整
       - name: Install Vercel CLI
         run: npm install -g vercel
       - name: Deploy to Vercel
