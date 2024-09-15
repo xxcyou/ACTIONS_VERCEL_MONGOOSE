@@ -1,22 +1,20 @@
 {
       "version": 2,
-        "builds": [
+      "builds": [
             {
                   "src": "index.js",
-                        "use": "@now/node",
-                              "installCommand": "npm install",
-                                    "buildCommand": "npm run build"
-                                        }
-                                          ],
-                                            "routes": [
-                                                {
-                                                      "src": "/(.*)",
-                                                            "dest": "index.js"
-                                                                }
-                                                                  ],
-                                                                    "env": {
-                                                                        "MONGO_URI": "${{ secrets.MONGO_URI }}"
-                                                                          }
-                                                                          }
-                                                                          
+                  "use": "@now/node",
+                  "installCommand": "npm install",
+                  "buildCommand": "npm run build"
+            }
+      ],
+      "routes": [
+            {
+                  "src": "/(.*)",
+                  "dest": "index.js"
+            }
+      ],
+      "env": {
+            "MONGO_URI": "${{ secrets.MONGO_URI }}"
+      }
 }
