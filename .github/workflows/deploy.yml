@@ -1,0 +1,27 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js dependencies
+        run: npm install
+      - name: Build and test project
+        run: npm run build && npm run test # 如果有构建和测试命令，可根据实际情况调整
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+      - name: Deploy to Vercel
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: your-vercel-org-id
+          VERCEL_PROJECT_ID: your-vercel-project-id
+      - name: Check MongoDB connection
+        run: npm run check-mongo-connection
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}

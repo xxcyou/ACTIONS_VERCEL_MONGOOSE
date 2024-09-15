@@ -1,0 +1,15 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "check-mongo-connection": "node check-mongo-connection.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "mongoose": "^7.0.3",
+      "dotenv": "^16.3.1"
+    }
+  }
